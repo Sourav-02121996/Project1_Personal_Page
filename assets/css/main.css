@@ -119,6 +119,8 @@ body.compact-footer footer {
 
 /* Dark gradient hero */
 .hero--particles {
+  height: 50vh;
+  min-height: 520px;
   background: radial-gradient(
     1200px 500px at 50% -10%,
     #1f2937 0%,
@@ -438,5 +440,4 @@ iframe {
   .project-row--reverse { grid-template-columns: 1fr; }
   .project-media { min-height: 240px; }
 }
-
 
