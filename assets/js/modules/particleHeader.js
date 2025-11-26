@@ -16,7 +16,7 @@ export function startParticles(canvasId = "projects-canvas") {
     canvas.width = Math.floor(width * DPR);
     canvas.height = Math.floor(height * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    particles = makeParticles(Math.floor(width * 0.08));
+    particles = makeParticles(Math.floor(width * 0.1));
   }
 
   function makeParticles(count) {
@@ -48,7 +48,7 @@ export function startParticles(canvasId = "projects-canvas") {
       if (p.y > height + 5) p.y = -5;
 
       ctx.beginPath();
-      ctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, 1.9, 0, Math.PI * 2);
       ctx.fill();
     });
 
@@ -60,13 +60,13 @@ export function startParticles(canvasId = "projects-canvas") {
         const dx = a.x - b.x;
         const dy = a.y - b.y;
         const d2 = dx * dx + dy * dy;
-        if (d2 < 120 * 120) {
-          ctx.globalAlpha = Math.max(0.05, 1 - d2 / (120 * 120));
+        if (d2 < 140 * 140) {
+          ctx.globalAlpha = Math.max(0.05, 1 - d2 / (140 * 140));
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.strokeStyle = "#ffffff";
-          ctx.lineWidth = 0.6;
+          ctx.lineWidth = 0.7;
           ctx.stroke();
           ctx.globalAlpha = 1;
         }
