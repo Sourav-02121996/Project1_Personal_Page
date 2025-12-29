@@ -6,8 +6,7 @@ export function mountHeader(activePage = "index") {
     { href: "index.html",     text: "Home",      key: "index" },
     { href: "about.html",     text: "About",     key: "about" },
     { href: "education.html", text: "Education", key: "education" },
-    { href: "projects.html",  text: "Projects",  key: "projects" },
-    { href: "team.html",      text: "Team",      key: "team" }
+    { href: "projects.html",  text: "Projects",  key: "projects" }
   ];
 
   const links = nav
